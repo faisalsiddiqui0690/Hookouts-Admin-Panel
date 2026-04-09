@@ -182,3 +182,35 @@
     border-right-color: var(--border);
   }
 }
+
+/* Dark Mode Toggle Icon Visibility */
+.light-mode,
+.dark-mode {
+  transition: opacity 0.3s ease;
+}
+
+/* In light mode, show moon icon (to switch to dark) */
+html[data-bs-theme="light"] .light-mode,
+html.light-mode .light-mode {
+  display: block;
+  opacity: 1;
+}
+
+html[data-bs-theme="light"] .dark-mode,
+html.light-mode .dark-mode {
+  display: none;
+  opacity: 0;
+}
+
+/* In dark mode, show sun icon (to switch to light) */
+html[data-bs-theme="dark"] .dark-mode,
+html.dark-mode .dark-mode {
+  display: block;
+  opacity: 1;
+}
+
+html[data-bs-theme="dark"] .light-mode,
+html.dark-mode .light-mode {
+  display: none;
+  opacity: 0;
+}
